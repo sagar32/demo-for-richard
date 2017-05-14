@@ -1,0 +1,53 @@
+	body{
+	background:#f9f9f9;
+	}
+	#container{
+		width:700px;
+		margin:0 auto;
+	}
+	#chatWindow{
+	height:400px;
+	width:250px;
+	overflow-y:scroll;
+	}
+	#mainWrapper{
+		display:none;
+	}
+	#chatWrapper{
+		float:left;
+		border:1px #ccc solid;
+		border-radius:10px;
+		background:#f4f4f4;
+		padding:10px;
+	}
+	#userWrapper{
+		float:left;
+		float:left;
+		border:1px #ccc solid;
+		border-radius:10px;
+		background:#f4f4f4;
+		padding:10px;
+		margin-left:20px;
+		width:150px;
+		max-height:200px;
+	}
+	#namesWrapper{
+		float:left;
+		float:left;
+		border:1px #ccc solid;
+		border-radius:10px;
+		background:#f4f4f4;
+		padding:10px;
+		margin-left:20px;
+		
+	}
+	#messageForm input[type='text']{
+		width:200px;
+	}
+	input{
+		height:30px;
+		
+	}
+    .borderRed{
+        border: 2px solid red;
+    }

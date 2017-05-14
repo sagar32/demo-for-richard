@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>Demo For Richard</title>
+	<link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+	<div id="container">
+		<div id="namesWrapper">
+			<h2>Demo For Richard</h2>
+			<p>UserName:</p>
+			<form id="usernameForm">
+				<input size="15" id="username">
+				<input type="submit" value="submit">
+			</form>
+			<div id="error"></div>
+		</div>
+
+		<div id="mainWrapper">
+			<h2>Demo For Richard</h2>
+			<div id="chatWrapper">
+				<div id="chatWindow"></div>
+				<form id="messageForm">
+					<input size="15" type="text" id="message" placeholder="Type Something....">
+					<input type="submit" value="send">
+				</form>
+			</div>
+			<div id="userWrapper">
+				<div id="timer"></div>
+				<div id="users"></div>
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="./assets/js/my-socket-client.js"></script>
+</body>
+
+</html>

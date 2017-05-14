@@ -1,0 +1,23 @@
+{
+  "name": "demo-for-richard",
+  "version": "1.0.0",
+  "description": "This Is NodeJs socket.io Demo.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagar32/demo-for-richard.git"
+  },
+  "author": "Sagar Chopada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagar32/demo-for-richard/issues"
+  },
+  "homepage": "https://github.com/sagar32/demo-for-richard#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.6"
+  }
+}
