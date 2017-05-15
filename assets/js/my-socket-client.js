@@ -35,7 +35,7 @@ $(function () {
     socket.on('usernames', function (data) {
         var html = '';
         for (var i = 0; i < data.length; i++) {
-            html += data[i] + "<br/>";
+            html += "<font color='green'>"+data[i].name + "</font>- Login Since:" + secondsToHms(data[i].time) + "(hh:mm:ss)<br/>";
         }
         $users.html(html);
     });
@@ -62,11 +62,6 @@ $(function () {
         $chat.append(data.msg + "<br/>");
         $chat.animate({ scrollTop: $chat.prop("scrollHeight") }, 1000);
     });
-    socket.on('timer',function(data){
-        console.log(data);
-       var newdata= secondsToHms(data)
-        $('#timer').html(newdata);
-    });
 });
 
 function secondsToHms(d) {
@@ -75,8 +70,8 @@ function secondsToHms(d) {
     var m = Math.floor(d % 3600 / 60);
     var s = Math.floor(d % 3600 % 60);
 
-    var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-    var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-    return hDisplay + mDisplay + sDisplay; 
+    var hDisplay = h < 10 ? "0" + h : h;
+    var mDisplay = m < 10 ? "0" + m : m;
+    var sDisplay = s < 10 ? "0" + s : s;
+    return hDisplay +":"+ mDisplay +":"+ sDisplay;
 }
