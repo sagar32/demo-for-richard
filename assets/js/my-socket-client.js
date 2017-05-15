@@ -29,13 +29,13 @@ $(function () {
         } else {
             $username.addClass('borderRed');
         }
-        $username.val('');
+        
     });
 
     socket.on('usernames', function (data) {
         var html = '';
         for (var i = 0; i < data.length; i++) {
-            html += "<font color='green'>"+data[i].name + "</font>- Login Since:" + secondsToHms(data[i].time) + "(hh:mm:ss)<br/>";
+            html += "<font color='green'>"+data[i].name + "</font>- Login since:" + secondsToHms(data[i].time) + "(hh:mm:ss)<br/>";
         }
         $users.html(html);
     });
